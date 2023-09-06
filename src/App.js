@@ -2,6 +2,7 @@ import NavBar from './Navbar';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Body from './Body';
 import About from './About'
+import UserDetails from './UserDetails';
 
 function App() {
 
@@ -18,6 +19,11 @@ function App() {
                 <Route exact path = "/about">
                   <About />
                 </Route>
+
+                <Route exact path = "/user/:id">
+                  <UserDetails />
+                </Route>
+
             </Switch>
         </div>
       </div>

@@ -7,10 +7,10 @@ const Body = () => {
     const [num, setNum] = useState(Math.random);
     const title = "Home page!";
   
-    const {data: blogs, isPending, error, setData} = useFetch('http://localhost:8000/data');
+    const {data: data, isPending, error, setData} = useFetch('http://localhost:8000/data');
   
     const handleDelete = (id) => {
-      const newUsers = blogs.filter((user) => user.id !== id);
+      const newUsers = data.filter((user) => user.id !== id);
       setData(newUsers);
     }
 
@@ -21,7 +21,7 @@ const Body = () => {
 
             { error && <div className = "err"> { error } </div>}
             { isPending && <div> Loading... </div>}
-            { blogs && <Users users = {blogs} handleDelete = {handleDelete}/> }
+            { data && <Users users = {data} handleDelete = {handleDelete}/> }
         
         </div>
     );

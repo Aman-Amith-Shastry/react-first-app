@@ -5,3 +5,12 @@ body{
 .err{
   color: red;
 }
+
+.user-list{
+  text-decoration: none;
+}
+
+.user-name{
+  color: white;
+  font-style: italic;
+}
