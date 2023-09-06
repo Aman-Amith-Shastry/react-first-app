@@ -5,7 +5,7 @@ import useFetch from './useFetch';
 const Body = () => {
 
     const [num, setNum] = useState(Math.random);
-    const title = "Hello!";
+    const title = "Home page!";
   
     const {data: blogs, isPending, error, setData} = useFetch('http://localhost:8000/data');
   
@@ -15,13 +15,13 @@ const Body = () => {
     }
 
     return(
-        <div className = "content">
+        <div className = "body">
             <h1> { title } </h1>
             <p> { num } </p>
 
-        { error && <div className = "err"> { error } </div>}
-        { isPending && <div> Loading... </div>}
-        { blogs && <Users users = {blogs} handleDelete = {handleDelete}/> }
+            { error && <div className = "err"> { error } </div>}
+            { isPending && <div> Loading... </div>}
+            { blogs && <Users users = {blogs} handleDelete = {handleDelete}/> }
         
         </div>
     );
