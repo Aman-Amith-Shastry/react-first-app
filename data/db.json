@@ -2,16 +2,25 @@
     "data": [
         {
             "name": "Alice",
+            "hobby": "archery",
             "id": 1
         },
         
         {
             "name": "Bob",
+            "hobby": "boxing",
             "id": 2
         },
 
         {
             "name": "Charlie",
+            "hobby": "cooking",
+            "id": 3
+        },
+
+        {
+            "name": "Derek",
+            "hobby": "dodgeball",
             "id": 3
         }
     ]
