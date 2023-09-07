@@ -1,6 +1,7 @@
 import Users from './Users';
 import { useState} from 'react';
 import useFetch from './useFetch';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 const Body = () => {
 
@@ -18,6 +19,9 @@ const Body = () => {
         <div className = "body">
             <h1> { title } </h1>
             <p> { num } </p>
+            <p>
+                <Link to = "/register"> New? Register here! </Link>
+            </p>
 
             { error && <div className = "err"> { error } </div>}
             { isPending && <div> Loading... </div>}

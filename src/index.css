@@ -14,3 +14,30 @@ body{
   color: white;
   font-style: italic;
 }
+
+.register-user-form label{
+  width: 50%;
+  padding-right: 40%;
+}
+
+.register-user-form input{
+  width: 50%;
+  padding: 0.2%;
+}
+
+.user-entry{
+  padding: 1% 0% 1% 0%;
+}
+
+.submit{
+  transition-duration: 0.3s;
+  padding: 5px 10px 5px 10px;
+  background-color: rgb(232, 239, 239);
+  border: none;
+  margin-left: 50%;
+}
+
+.submit:hover{
+  transform: scale(1.2);
+  transition-duration: 0.3s;
+}
