@@ -1,27 +1,40 @@
 {
-    "data": [
-        {
-            "name": "Alice",
-            "hobby": "archery",
-            "id": 1
-        },
-        
-        {
-            "name": "Bob",
-            "hobby": "boxing",
-            "id": 2
-        },
-
-        {
-            "name": "Charlie",
-            "hobby": "cooking",
-            "id": 3
-        },
-
-        {
-            "name": "Derek",
-            "hobby": "dodgeball",
-            "id": 3
-        }
-    ]
+  "data": [
+    {
+      "name": "Alice",
+      "email": "1@gmail.com",
+      "hobby": "archery",
+      "id": 1
+    },
+    {
+      "name": "Bob",
+      "email": "2@gmail.com",
+      "hobby": "boxing",
+      "id": 2
+    },
+    {
+      "name": "Charlie",
+      "email": "3@gmail.com",
+      "hobby": "cooking",
+      "id": 3
+    },
+    {
+      "name": "Derek",
+      "email": "4@gmail.com",
+      "hobby": "dodgeball",
+      "id": 4
+    },
+    {
+      "name": "wedwf",
+      "email": "wefef@wfef.wdwef",
+      "age": "3",
+      "id": 5
+    },
+    {
+      "name": "ewidjfo",
+      "email": "owiefo@ewofh.wef",
+      "age": "34",
+      "id": 6
+    }
+  ]
 }

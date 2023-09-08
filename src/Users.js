@@ -8,7 +8,7 @@ const Users = ({users, handleDelete}) => {
             <div className = "preview" key = { user.name }>
                 <Link to = {`/user/${user.id}`} className = "user-list">
                     <h2 className = "user-name">Name: { user.name }</h2>
-                    <h3>Id: { user.id }</h3>
+                    <h3>Email: { user.email }</h3>
                 </Link>
                 <button onClick={() => handleDelete( user.id )}> Delete user </button>
             </div>

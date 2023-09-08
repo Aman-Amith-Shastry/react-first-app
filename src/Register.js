@@ -1,20 +1,40 @@
 import { useState } from "react";
+// import { useHistory } from "react-router-dom";
 
 const RegisterUser = () => {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [age, setAge] = useState(0);
+    const [success, setSuccess] = useState(false);
+    const [isPending, setIsPending] = useState(false);
+    // const history = useHistory();
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const user = { name, email, age };
 
-        console.log(user);
+        setIsPending(true);
+
+        fetch('http://localhost:8000/data', {
+            method: "POST",
+            headers: {"Content-Type": "application/json"}, // Type of content being sent- json file
+            body: JSON.stringify(user) // Actual content is the JSON stringified object returned from the user object
+        }).then(() => {
+            setSuccess(true);
+            setIsPending(false);
+        })
     }
 
     return (
         <div className = "register-user-form">
+
+            <div className="register-status">
+                { success && (
+                    <div className="success-message"> Successfully registered! </div>
+                )}
+
+            </div>
             <h2> Register </h2>
             <form onSubmit = {handleSubmit}>
                 <div className="user-entry">
@@ -47,7 +67,8 @@ const RegisterUser = () => {
                     />
                 </div>
 
-                <button className="submit">Submit</button>
+                { !isPending && <button className = "submit">Submit</button>}
+                { isPending && <button className = "submit" disabled>Registering...</button>}
             </form>
         </div>
     );
