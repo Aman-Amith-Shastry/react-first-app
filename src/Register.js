@@ -1,5 +1,5 @@
 import { useState } from "react";
-// import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const RegisterUser = () => {
 
@@ -8,7 +8,7 @@ const RegisterUser = () => {
     const [age, setAge] = useState(0);
     const [success, setSuccess] = useState(false);
     const [isPending, setIsPending] = useState(false);
-    // const history = useHistory();
+    const history = useHistory();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -23,6 +23,7 @@ const RegisterUser = () => {
         }).then(() => {
             setSuccess(true);
             setIsPending(false);
+            history.push('/');
         })
     }
 
